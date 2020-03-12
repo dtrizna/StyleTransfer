@@ -1,5 +1,5 @@
 import tensorflow as tf
-from utils import gram_matrix
+from modules.utils import gram_matrix
 
 def compute_content_cost(a_C, a_G):
     """
@@ -37,22 +37,13 @@ def compute_style_cost_one_layer(a_S, a_G):
     J_style_layer = tf.reduce_sum(tf.square(tf.subtract(GS, GG)))/(4 * n_C**2 * (n_W * n_H)**2)
     
     return J_style_layer
+   
+
+def total_cost(J_content, J_style, alpha = 10, beta = 40):
+    return alpha * J_content + beta * J_style
 
 
-def compute_style_cost(model, STYLE_LAYERS):
-    """
-    STYLE_LAYERS -- list with tuples as elements, where each tuple's:
-                    [0] -- contains layer name
-                    [1] -- weight to assign that layer in order to compute cost
-                Note! Overall sum of all weights should be 1.
-    """
-    J_style = 0
-    for name, weight in STYLE_LAYERS:
-        a_S_layer = model.get_layer(name).output
-        
-
-
-# Check:
-tf.random.set_seed(1)
-print(compute_content_cost(tf.random.normal([1,2,3,4]),tf.random.normal([1,2,3,4])))
-print(compute_style_cost(tf.random.normal([1,2,3,4]),tf.random.normal([1,2,3,4])))
+if __name__ == "__main__":
+    # Check:
+    tf.random.set_seed(1)
+    print(compute_content_cost(tf.random.normal([1,2,3,4]),tf.random.normal([1,2,3,4])))
