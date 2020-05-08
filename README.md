@@ -3,7 +3,7 @@ Algorithm initialy was described in https://arxiv.org/abs/1508.06576
 
 Here's what the program will have to do:
 
-    Create an Interactive Session [NEEDED IN CASE OF Keras?]
+    Create an Interactive Session [DONE]
     Load the content image [DONE]
     Load the style image [DONE]
     Randomly initialize the image to be generated [DONE]
@@ -18,7 +18,7 @@ Here's what the program will have to do:
     updating the generated image at every step.
 
 ## Some results 
-### should be tuned
+### not perfect, still place for tunage
 
 Style image of course van Gogh's "Starry Night":  
 
