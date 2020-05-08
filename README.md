@@ -14,5 +14,19 @@ Here's what the program will have to do:
         Compute the total cost [DONE]
         Define the optimizer and the learning rate [DONE]
 
-    Initialize the TensorFlow graph and run it for a large number of iterations, [HOW?]
+    Initialize the TensorFlow graph and run it for a large number of iterations, [IN TUNAGE]
     updating the generated image at every step.
+
+Some results (should be tuned):  
+
+Style image of course van Gogh's "Starry Night":  
+
+![alt text](data/StarryNight.jpg "van Gogh 'Starry Night'")
+
+Style transfer result for Riga night panorama:
+
+![alt text](data/riga_at_iteration_8.png)
+
+Style transfer result for me and my daughter:
+
+![alt text](data/me_and_daughter_iteration_6.png)
