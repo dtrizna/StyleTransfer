@@ -17,7 +17,8 @@ Here's what the program will have to do:
     Initialize the TensorFlow graph and run it for a large number of iterations, [IN TUNAGE]
     updating the generated image at every step.
 
-Some results (should be tuned):  
+## Some results 
+### should be tuned
 
 Style image of course van Gogh's "Starry Night":  
 
